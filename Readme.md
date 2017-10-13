@@ -1,6 +1,7 @@
 ## 概述
 `iOS`原生包`RN`, 即为以`iOS`为基础工程,在指定的页面,包入`react native`提供的`RCTRootView`页面.
 因过程较为繁琐,涉及`podfile`生成,初始化`RN`工程,指定版本,启动 `RN`本地服务器等等,不一而足, 因此采用 `Python`调用系统的`shell`脚本来完成.
+[参考文章 -- reactnative集成到原生ios项目](https://www.tuicool.com/articles/BfInEv)
 
 ## 前提
 * 已经安装并配置好了`React native`环境
