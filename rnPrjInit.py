@@ -84,7 +84,12 @@ def main():
         generatePodfile('8.0')
         res = os.system('pod install')
         if res == 0:
-            print('========== 大功告成! ========')
+            print('========== Podfile 安装完毕,开始启动本地服务器! =============================')
+            os.chdir('./ReactNativePrj')
+            bootLocalService = os.system('react-native start') # 启动本地服务器
+            while bootLocalService != 0:
+                os.system('chmod -R 777 node_modules')
+                bootLocalService = os.system('react-native start') # 启动本地服务器
         else:
             print('========== 请检查当前 podfile 后重试! ========')
     else:
