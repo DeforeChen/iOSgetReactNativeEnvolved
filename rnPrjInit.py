@@ -29,7 +29,7 @@ pod 'React', :path => './ReactNativePrj/node_modules/react-native', :subspecs =>
     'RCTText',
     'RCTWebSocket',
     'RCTLinkingIOS',
-    'BatchedBridge',
+    # 'BatchedBridge',
 ]
 
 pod "Yoga", :path => "./ReactNativePrj/node_modules/react-native/ReactCommon/yoga"
