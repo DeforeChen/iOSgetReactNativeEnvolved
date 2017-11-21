@@ -56,7 +56,7 @@ def fetchPodfileContent(iosVersion,prjName):
     'RCTText',\n\
     'RCTWebSocket',\n\
     'RCTLinkingIOS',\n\
-    'BatchedBridge',\n\
+    # 'BatchedBridge',\n\
 ]
 
 pod "Yoga", :path => "./ReactNativePrj/node_modules/react-native/ReactCommon/yoga"\n
@@ -75,11 +75,11 @@ def generatePodfile(iosVersion):
 
 ## 根据版本号,生成初始化 RN 工程的命令
 def fetchRN_InitCmd(rnVersion):
-    initRN = 'rninit init '+ 'ReactNativePrj' +' --source react-native@' + rnVersion
+    initRN = 'react-native init ReactNativePrj' + ' --version ' + rnVersion
     return initRN
 
 def main():
-    rnInitCmd = fetchRN_InitCmd('0.47.0')
+    rnInitCmd = fetchRN_InitCmd('0.44.3')
     if os.system(rnInitCmd) == 0: #表示初始化完毕,开始生成对应的pod 文件
         generatePodfile('8.0')
         res = os.system('pod install')
